@@ -1,5 +1,6 @@
 ---
 import Footer from "../components/Footer.astro";
+import Greeting from "../components/Greeting";
 import Header from "../components/Header.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import '../styles/global.css';
@@ -10,4 +11,5 @@ const pageTitle = "Home"
 
 <BaseLayout {pageTitle}>
 <h1>Welcome to the Booklez Blog</h1>
+<Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
 </BaseLayout>
